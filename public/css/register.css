@@ -1,0 +1,22 @@
+.registerWrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.registerWrapper .reigsterForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 2px 2px 5px #ccc;
+          box-shadow: 2px 2px 5px #ccc;
+  width: 75%;
+  background-color: whitesmoke;
+}
+
+.registerWrapper .reigsterForm #registerTitle {
+  margin-bottom: 20px;
+}
+/*# sourceMappingURL=register.css.map */

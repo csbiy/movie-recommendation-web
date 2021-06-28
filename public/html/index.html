@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <script src="../js/swiper.min.js"></script>
+</head>
+<body>
+    <div id="aboutThisSite">
+        <div class="aboutThisSiteTitle">
+            <h1>MovieForYou</h1>
+            <div>
+                <button id="cancelBtn"><i class="fa fa-times" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>movieForYou는 영화 추천 사이트로, 사용자 맞춤 영화를 추천해주는 사이트입니다. 
+                   영화 추천 알고리즘은 특정 장르의 영화 표본을 사용자에게 제시해주고 , 응답 결과를 통해 
+                   영화DB에서 영화를 추천해줍니다. 
+                </p>
+            </div>
+            <div>
+                <div>
+                    <img src="../img/free-icon-recommended-star-2302001.png" alt="">
+                </div>
+                <div>
+                    <small> * 본 사이트는 토이프로젝트용으로 개발하였으며, 상업적 용도가 아닙니다. </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contentWrapper">
+        <div id="topNavi">
+            <div class="topMenu">
+                <img id="mainIcon" src="../img/free-icon-recommended-star-2302001.png" alt="">
+                <!-- <div class="Copyright">
+                    아이콘 제작자 : <a href="" title="photo3idea_studio">photo3idea_studio</a> from <a href="https://www.flaticon.com/kr/" title="Flaticon">www.flaticon.com</a><p>본 웹사이트는 상업목적용 사이트가 아닙니다. </p> 
+                </div> -->
+                <div>
+                    <h1 id="mainTitle">MovieForYou</h1>
+                </div>
+            </div>
+            <div class="topMenu">
+                <ul class="topSubMenu">
+                    
+                    <li class="subMenuItem">
+                        <label for="search">Quick Recommendation </label>
+                        <input id="search" type="text" placeholder="ex) 액션,호러..">
+                    </li>
+                    <li class="subMenuItem"><a href="#" id="aboutSite">MovieForYou?</a></li>
+                    <li id="boardBtn" class="subMenuItem"><a href="/boards">게시판</a></li>
+                    <li class="subMenuItem"><a href="/members/login">로그인</a></li>
+                    <li class="subMenuItem"><a href="/members">회원가입</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>    
+        <div class="swiper-container mainMovie">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide movieItem0">Slide 1</div>
+              <div class="swiper-slide movieItem1">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          
+            <!-- If we need scrollbar -->
+            <div class="swiper-scrollbar"></div>
+          </div>
+    </div>
+    <script src="../js/index.js"></script>
+</body>
+</html>

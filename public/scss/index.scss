@@ -1,0 +1,86 @@
+
+.setLowOpacity{
+    opacity: 0.1;
+}
+
+#aboutThisSite{
+    .aboutThisSiteTitle{
+        display: flex;
+        justify-content: space-between;
+        align-items:stretch;
+
+        h1{
+            width: 100%;
+            margin-top: 0;
+            text-align: center;
+        }
+        #cancelBtn{
+            background-color: transparent;
+            border: none;
+            margin-top: 10px;
+            margin-right: 10px;
+            
+        }
+    }
+    display: none;
+    width: 100vh;
+    height: 80vh;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #ccc;
+}
+#topNavi{
+
+    display: flex;
+    justify-content: space-between;
+    .topMenu{
+        display: flex;
+        align-items: center;
+        
+
+        #mainIcon{
+            width: 100px;
+            height: 100px;
+        }
+    
+        #mainTitle{
+            font-size: 22px;
+        }
+        .topSubMenu{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+
+            .subMenuItem{
+                margin-right: 40px;
+            }
+           
+        }
+    
+        .Copyright{
+            font-size: 7px;
+        }
+
+    }
+
+
+}
+
+.mainMovie{
+    margin-top: 20px;
+    height: 60vh;
+    .movieItem0,.movieItem1{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .movieItem0{
+        background-image: url("../img/free-icon-recommended-star-2302001.png");
+    }
+    .movieItem1{
+        background-image: url("../img/images.jfif");
+    }
+}

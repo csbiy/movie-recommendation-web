@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/register.css">
+    {% include 'base.html' %}
+</head>
+<body>
+    {% include 'header.html' %}
+    <div class="registerWrapper">
+        <div class="reigsterForm pr-5 pl-5">
+            <form action="/members" method="POST">
+                <div class="mt-5">
+                    <h2 id="registerTitle">회원가입</h2>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">성함</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="이름을 입력해주세요" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">이메일 주소</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="이메일을 입력해주세요" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">비밀번호</label>
+                    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="비밀번호를 입력해주세요" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">비밀번호 확인</label>
+                    <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="비밀번호를 재입력해주세요" name="rePassword">
+                </div>
+                <div class="form-group">
+                    <div class="d-flex flex-row align-items-center">
+                        <div class="mr-3">
+                            <p>성별</p>
+                        </div>
+                        <label class="mr-3" for="female">여성</label>
+                        <input class="mr-5" type="radio"  id="female" value="F" name="gender">
+                        <label class="mr-3" for="male">남성</label>
+                        <input class="mr-3" type="radio" id="male" value="M"name="gender">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <p>생년월일</p>
+                </div>
+                <div class="form-group d-flex flex-row align-items-center">
+                    <select class="form-control mr-3" name="year">
+                        <option>2000</option>
+                        <option>1999</option>
+                        <option>1998</option>
+                        <option>1997</option>
+                        <option>1996</option>
+                    </select>
+                    <select class="form-control mr-3" name="month">
+                        <option>12</option>
+                        <option>11</option>
+                        <option>10</option>
+                        <option>9</option>
+                        <option>8</option>
+                        <option>7</option>
+                        <option>6</option>
+                        <option>5</option>
+                        <option>4</option>
+                        <option>3</option>
+                        <option>2</option>
+                        <option>1</option>
+                    </select>
+                    <select class="form-control" name="day">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                    </select>
+                </div>
+                <div class="w-25 col-auto mx-auto mt-5 mb-5">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,AAAA,CACH,KAAK,CAAE,KAAK,CACf",
+    "sources": [
+        "../scss/board.scss"
+    ],
+    "names": [],
+    "file": "board.min.css"
+}

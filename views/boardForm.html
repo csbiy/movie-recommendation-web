@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="../css/board.css">
+    {% include 'base.html' %}
+</head>
+<body>
+    {% include 'header.html' %}
+<div>
+    <div class="boardHeader d-flex justify-content-between">
+        <h3>게시판</h3>
+        <div>
+            <a href="/boards">글쓰기 취소</a> 
+        </div>
+    </div>
+    <form method="POST" action="/boards/boardForm">
+        <div class="mt-4">
+            <div>
+                <div class="d-flex">
+                    <label for="boardTitle" class="mr-5">제목</label>
+                    <div class=" w-75 ">    
+                        <input id="boardTitle" class="form-control" type="text" placeholder="게시판 제목을 입력해주세요..." name="title">         
+                        <div id="boardTitleWarning"class="d-flex text-danger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/></svg>
+                            <p>게시판 제목은 필수입니다.</p>
+                        </div>
+                    </div> 
+                </div>
+            <div class="mt-3">
+                <div class="form-group d-flex">
+                    <label for="boardContent" class="mr-5">내용</label>
+                    <textarea class="form-control w-75" id="boardContent" rows="15" placeholder="게시판 내용을 입력해주세요..." name="content"></textarea>
+                </div>
+            </div>
+            <div class="mt-5">
+                <div class="d-flex">
+                    <div class="mr-5">
+                        <p>파일첨부</p>
+                    </div>
+                    <div class="input-group w-75">
+                        <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputFile" aria-describedby="inputGroupFileAddon04">
+                        <label class="custom-file-label" for="inputFile">파일을 선택해주세요...</label>
+                        </div>
+                        <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">첨부</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5">
+                <div class="mx-auto submit">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+    {% include 'footer.html' %}
+    <script src="../js/board.js"></script>
+</body>
+
+</html>
