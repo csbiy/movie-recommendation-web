@@ -2,9 +2,6 @@ const connection = require("../conf/db");
 const dateConverter = require("./DateConverter");
 const countIdx = 0;
 
-/***
- * NOTE create read update delete member 
- */
 
 isExistMember = function (member) {
     return new Promise(function (resolve, reject) {
@@ -28,12 +25,10 @@ getNamePasswordByEmail = function (loginForm) {
             return resolve(res);
         });
     });
-
 }
-
 
 module.exports = {
     createMember,
     getNamePasswordByEmail,
-    isExistMember
+    isExistMember,
 };
