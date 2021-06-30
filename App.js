@@ -6,12 +6,14 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const members = require("./routers/member/member");
 const boards = require("./routers/board/board");
+const dbSetUp = require("./conf/db")
 const serverPort = 3002;
 // 
 
 
 
 let app =  express();
+// app.set("env",process.env.DATABASE_ENV || "development");
 app.set("port",process.env.PORT || 3002);
 app.use(cookieParser('crypto'));
 app.use(session({
@@ -35,6 +37,7 @@ app.use("/members",members);
 app.use("/boards",boards);
 
 app.listen(serverPort,()=>{
+    // dbSetUp.createConnection(app.get("env"));
     console.log("Server running on " + serverPort );
 });
 app.get("/",function(req,res){

@@ -1,8 +1,6 @@
 const connection = require("../conf/db");
 const dateConverter = require("./DateConverter");
 const countIdx = 0;
-
-
 isExistMember = function (member) {
     return new Promise(function (resolve, reject) {
         connection.query(`select count(*) as countedMember from user where email='${member.getEmail()}'`,function(err,res,fields){
