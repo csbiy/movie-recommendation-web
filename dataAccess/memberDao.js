@@ -1,3 +1,4 @@
+const { JSONCookie } = require("cookie-parser");
 const connection = require("../conf/db");
 const dateConverter = require("./DateConverter");
 const countIdx = 0;
@@ -10,10 +11,13 @@ isExistMember = function (member) {
         });
     })
 }
-createMember = function (member) {
-    connection.query(`insert into user(email,name,password,year,month,day,createdAt,gender) values ('${member.getEmail()}','${member.getName()}','${member.getPassword()}',${member.getYear()},${member.getMonth()},${member.getDay()},'${dateConverter.toMySQLDateTime(new Date())}','${member.getGender()}')`, function (err, res, fields) {
-        if (err) throw err;
-    });
+createMember =  function (member) {
+    return new Promise(function(resolve,reject){
+        connection.query(`insert into user(email,name,password,year,month,day,createdAt,gender) values ('${member.getEmail()}','${member.getName()}','${member.getPassword()}',${member.getYear()},${member.getMonth()},${member.getDay()},'${dateConverter.toMySQLDateTime(new Date())}','${member.getGender()}')`, function (err, res, fields) {
+            if (err) return reject(err);
+            return resolve(true);
+        });
+    })
 }
 
 getNamePasswordByEmail = function (loginForm) {

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "SET DATABASE_ENV='test' && node App.js",
+    "start": "SET DATABASE_ENV='development' && node App.js",
     "test": "SET DATABASE_ENV='test' && mocha test/**/*.js"
   },
   "author": "",

@@ -37,7 +37,6 @@ app.use("/members",members);
 app.use("/boards",boards);
 
 app.listen(serverPort,()=>{
-    // dbSetUp.createConnection(app.get("env"));
     console.log("Server running on " + serverPort );
 });
 app.get("/",function(req,res){

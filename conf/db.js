@@ -14,7 +14,6 @@ createConnection = function(env){
     else{
         dbConfig["database"] = "nodejs_test";
     }
-
     return connection = mysql.createPool(dbConfig)
 };
 
