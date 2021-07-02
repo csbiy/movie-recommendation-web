@@ -9,7 +9,6 @@ const baseURL = "/../../views/";
 
 
 router.post("/",function(req,res){
-    console.log(req.body);
     memberService.createMember(new memberFormDto(req.body))
         .then(rs=>{
             try{

@@ -7,13 +7,9 @@ const cookieParser = require("cookie-parser");
 const members = require("./routers/member/member");
 const boards = require("./routers/board/board");
 const dbSetUp = require("./conf/db")
-const serverPort = 3002;
+const serverPort = 8999;
 // 
-
-
-
-let app =  express();
-// app.set("env",process.env.DATABASE_ENV || "development");
+const app =  express();
 app.set("port",process.env.PORT || 3002);
 app.use(cookieParser('crypto'));
 app.use(session({

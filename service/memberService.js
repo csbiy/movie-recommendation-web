@@ -4,15 +4,15 @@ const bcrypt = require("bcrypt");
 /***
  * 비동기 처리의 콜백함수가 던진 예외는 콜백함수로 넘긴 함수로 전파되지 않습니다. 
  */
-createMember = function(member){
-    return memberDao.isExistMember(member)
+createMember =  function(member){
+    return  memberDao.isExistMember(member)
         .then((isExist)=>{
             if(isExist){
             return new Error("exist member");
         }else{
             encryptPassword(member).then((member)=>{
-                memberDao.createMember(member);
-            });
+                 memberDao.createMember(member);
+         });
             return true;
         }
     })
